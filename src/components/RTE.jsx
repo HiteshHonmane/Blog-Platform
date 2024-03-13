@@ -6,7 +6,7 @@ export default function RTE({name, control, label, defaultValue =""}) {
 
 
   return (
-    <div className='w-full'>
+    <div className='w-full '>
       {label && <label className='inline-block mb-1 pl-1'> {label}</label>} 
 
       <Controller
@@ -17,7 +17,7 @@ export default function RTE({name, control, label, defaultValue =""}) {
         initialValue={defaultValue}
         init ={{
             initialValue: defaultValue,
-            height: 500,
+            height: 630,
             menubar: true,
             plugins: [
                 "image",
