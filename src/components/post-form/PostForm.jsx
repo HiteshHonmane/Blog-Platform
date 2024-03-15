@@ -96,18 +96,21 @@ export default function PostForm({ post }) {
             });
           }}
         />
+        <div className= " mt-4 w-[95vw] sm:w-full  ">
         <RTE
           label="Content"
           name="content"
           control={control}
           defaultValue={getValues("content")}
         />
+        </div>
+
       </div>
       <div className="w-1/3 px-2  ">
         <Input
-          label="Featured Image :"
+          label="Image"
           type="file"
-          className="mb-4 "
+          className="mb-4 text-[12px] "
           accept="image/png, image/jpg, image/jpeg, image/gif"
           {...register("image", { required: !post })}
         />
@@ -120,8 +123,10 @@ export default function PostForm({ post }) {
             />
           </div>
         )}
+        <div className="ml-2 mb-1" > Status</div>
         <Select
-          options={["active", "inactive"]}
+        
+          options={["Active", "Inactive"]}
           label="Status"
           className="mb-4"
           {...register("status", { required: true })}

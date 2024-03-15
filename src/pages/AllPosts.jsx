@@ -11,7 +11,7 @@ function AllPosts() {
         }
     })
   return (
-    <div className='w-full  py-8'>
+    <div className='w-full bg-gray-300  py-8'>
         <Container >
             <div className='flex sm:flex-wrap  '>
                 {posts.map((post) => (
