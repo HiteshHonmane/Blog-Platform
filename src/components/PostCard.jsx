@@ -11,7 +11,7 @@ function PostCard({$id, title, featuredImage, content}) {
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
   <a href="#">
    <img src={appwriteService.getFilePreview(featuredImage)} alt={title}
-            className='rounded-xl h-[16vh] sm:h-[23vh]  ' />
+            className='rounded-xl h-[16vh] sm:h-[23vh] sm:w-full w-full ' />
   </a>
   <div className="p-5">
     <a href="#">
