@@ -26,6 +26,16 @@ To run this project locally:
 4. Start the development server: npm run dev
 5. Create a `.env` file in the root directory of the project and add your environment variables. You can use the provided `.env.sample` file as a template.
 
+## Deployed 
+
+Live at https://blog-platform-peach.vercel.app/
+
+### Test User Login:
+
+Email: testuser@gmail.com
+
+Password: 12345678
+
 ## Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests.
