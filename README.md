@@ -10,6 +10,16 @@ Blogging website project! This project is built using React, Tailwind CSS, and A
 - Image upload feature for embedding images within articles.
 - Production-grade techniques employed for scalability and maintainability.
 
+## Deployed 
+
+Live at https://blog-platform-peach.vercel.app/
+
+### Test User Login:
+
+Email: testuser@gmail.com
+
+Password: 12345678
+
 ## Technologies Used
 
 - React.js
@@ -25,16 +35,6 @@ To run this project locally:
 3. Install dependencies: npm install
 4. Start the development server: npm run dev
 5. Create a `.env` file in the root directory of the project and add your environment variables. You can use the provided `.env.sample` file as a template.
-
-## Deployed 
-
-Live at https://blog-platform-peach.vercel.app/
-
-### Test User Login:
-
-Email: testuser@gmail.com
-
-Password: 12345678
 
 ## Contributing
 
