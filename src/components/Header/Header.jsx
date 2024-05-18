@@ -38,7 +38,7 @@ function Header() {
 
 
   return (
-    <header className=' z-10 w-full bg-gray-300 py-3 shadow-md '>
+    <header className=' w-[100vw] py-2.5 justify-between items-center  '>
       <Container>
         <nav className='flex items-center justify-center'>
           <div className='mr-4'>
@@ -47,7 +47,7 @@ function Header() {
 
               </Link>
           </div>
-          <ul className='flex text-gray-700 text-[16px] ml-auto'>
+          <ul className=  'text-zinc-900  font-normal font- leading-normal flex m-auto '>
             {navItems.map((item) => 
             item.active ? (
               <li key={item.name}>
