@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import appwriteService from "../appwrite/config";
 import {Container, PostCard} from '../components'
+import Bg from './../../public/bghome.png'
 
 
 function Home() {
@@ -37,9 +38,15 @@ function Home() {
         )
     }
     return (
-        <div className='bg-gray-300 w-full py-8'>
+        <div className='bg-gray-300 w-full  '>
+            <div>
+            <img className="w-full h-[600px] relative top-0 " src={Bg} />
+            </div>
+
+
             <Container>
-                <div className='flex bg-gray-300 flex-wrap'>
+                
+                <div className='flex bg-gray-300 flex-wrap '>
                     {posts.map((post) => (
                         <div key={post.$id} className='p-2 h-[] sm:w-1/4 w-1/2 '>
                             <PostCard {...post} />
@@ -47,6 +54,7 @@ function Home() {
                     ))}
                 </div>
             </Container>
+            
         </div>
     )
 }
