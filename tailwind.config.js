@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Valencia: ["Valencia"],
-        Brucken: ['Brucken'],
+        roboto: ['Roboto', 'sans-serif'],
+        spartan: ['Spartan', 'sans-serif'],
        
       },
       fontSize: {

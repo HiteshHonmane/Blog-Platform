@@ -37,20 +37,20 @@ function Header() {
   ];
 
   return (
-    <header className=" w-[100vw] py-2.5 items-center z-50 absolute justify-between   ">
+    <header className=" w-[100vw] py-2.5 items-center z-50  justify-between   ">
       <Container>
 
-        <nav className="flex flex-row  justify-between ">
-          <div className="text-gray-50 text-xl font-bold font-['Spartan']">
+        <nav className="flex flex-row w-[100vw]   justify-between gap-[60vw] items-center ">
+          <div className="text-gray-50 text-xl font-bold font-spartan">
             RUNO
           </div>
-          <ul className="w-[1440px] h-20 bg-black/opacity-20 flex   ">
+          <ul className="w-[1440px] h-20 bg-black/opacity-20 flex  items-center  justify-around ">
             {navItems.map((item) =>
               item.active ? (
                 <li key={item.name}>
                   <button
                     onClick={() => navigate(item.slug)}
-                    className="text-white text-xs font-bold font-Roboto"
+                    className="text-white text- font-bold font-roboto "
                   >
                     {item.name}
                   </button>
