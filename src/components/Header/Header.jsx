@@ -25,19 +25,24 @@ function Header() {
       active: !authStatus,
     },
     {
-      name: "Posts",
+      name: "Articles",
       slug: "/all-posts",
       active: authStatus,
     },
     {
-      name: "Add Post",
+      name: "Write Ar",
       slug: "/add-post",
       active: authStatus,
     },
   ];
 
   return (
-    <header className=" w-[100vw] py-2.5 items-center z-50  justify-between   ">
+    <header className="sm:w-[1216px] sm:h-[60px] sm:py-2.5 sm:justify-between sm:items-center sm:inline-flex 
+    w-[390px] h-[72px] p-5 justify-between items-center inline-flex
+    
+    ">
+
+
       <Container>
 
         <nav className="flex flex-row w-[100vw]   justify-between gap-[60vw] items-center ">

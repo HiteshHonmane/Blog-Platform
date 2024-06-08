@@ -46,7 +46,7 @@ function Home() {
       <Container>
         <div className="flex bg-gray-300 flex-wrap ">
           {posts.map((post) => (
-            <div key={post.$id} className="p-2 h-[] sm:w-1/4 w-1/2 ">
+            <div key={post.$id} className="p-2 w-[600px]   ">
               <PostCard {...post} />
             </div>
           ))}
