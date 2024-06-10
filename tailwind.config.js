@@ -11,6 +11,7 @@ export default {
         roboto: ['Roboto', 'sans-serif'],
         spartan: ['Spartan', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
+
       },
     },
   },
