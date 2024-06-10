@@ -4,8 +4,15 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class', // or 'media'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
+        spartan: ['Spartan', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
