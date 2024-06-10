@@ -8,45 +8,34 @@ function PostCard({ $id, title, featuredImage, content }) {
 
   return (
     <Link to={`/post/${$id}`}>
-      <div className="w-[592px] h-[200px] justify-start items-start gap-6 inline-flex">
-        <img
-          src={appwriteService.getFilePreview(featuredImage)}
-          alt={title}
-          className='w-80 h-[200px] relative'
-        />
-        <div className="grow shrink basis-0 flex-col justify-start items-start gap-6 inline-flex">
-          <div className="self-stretch h-[140px] flex-col justify-start items-start gap-3 flex">
-            <div className="self-stretch text-violet-700 text-sm font-semibold font-['Inter'] leading-tight">
-              
+   <div className="flex flex-col sm:flex-row min-w-[592px] gap-6">
+    <img className="min-w-[326px] sm:min-w-[326px] sm:w-80 xl:w-[326px] h-auto sm:h-[200px] xl:h-[228px] object-cover" src={appwriteService.getFilePreview(featuredImage)} />
+    <div className="flex flex-col justify-start items-start gap-6 flex-grow">
+        <div className="w-full flex flex-col justify-start items-start gap-3">
+            <div className="w-full text-violet-700 text-sm font-semibold font-['Inter'] leading-tight"> 
+                {/* date */}
             </div>
-            <div className="self-stretch h-[108px] flex-col justify-start items-start gap-2 flex">
-              <div className="self-stretch text-zinc-900 text-lg font-semibold font-['Inter'] leading-7">
-                {title}
-              </div>
-              <div 
-                className="self-stretch w-full  h-full text-gray-500 text-base font-normal font-['Inter'] leading-normal  overflow-hidden  "
-                dangerouslySetInnerHTML={{ __html: sanitizedContent }}  
-              />
-            </div>
-          </div>
-          <div className="self-stretch justify-start items-start gap-2 inline-flex">
-            <div className="mix-blend-multiply justify-start items-start flex">
-              <div className="px-2.5 py-0.5 bg-sky-50 rounded-2xl justify-center items-center flex">
-                <div className="text-center text-sky-700 text-sm font-medium font-['Inter'] leading-tight">
-                 IT
+            <div className="w-full flex flex-col justify-start items-start gap-2 md:gap-4">
+                <div className="w-full h-[50px] text-zinc-900 text-lg sm:text-2xl font-semibold font-['Inter'] xl:leading-7 sm:leading-loose">
+                    {title}
                 </div>
-              </div>
+                <div className="w-full h-[90px] text-gray-500 text-base font-normal font-['Inter'] leading-normal overflow-hidden" dangerouslySetInnerHTML={{ __html: sanitizedContent }}></div>
             </div>
-            <div className="mix-blend-multiply justify-start items-start flex">
-              <div className="px-2.5 py-0.5 bg-pink-50 rounded-2xl justify-center items-center flex">
-                <div className="text-center text-pink-700 text-sm font-medium font-['Inter'] leading-tight">
-                  Tech
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+        <div className="w-full flex justify-start items-start gap-2">
+            <div className="px-2.5 py-0.5 bg-purple-50 rounded-2xl flex justify-center items-center">
+                <div className="text-center text-violet-700 text-sm font-medium font-['Inter'] leading-tight">Design</div>
+            </div>
+            <div className="px-2.5 py-0.5 bg-indigo-50 rounded-2xl flex justify-center items-center">
+                <div className="text-center text-indigo-700 text-sm font-medium font-['Inter'] leading-tight">Research</div>
+            </div>
+            <div className="px-2.5 py-0.5 bg-pink-50 rounded-2xl flex justify-center items-center">
+                <div className="text-center text-pink-700 text-sm font-medium font-['Inter'] leading-tight">Presentation</div>
+            </div>
+        </div>
+    </div>
+</div>
+
     </Link>
   );
 }
