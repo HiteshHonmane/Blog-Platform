@@ -4,6 +4,7 @@ import { Button, Input, RTE, Select } from "..";
 import appwriteService from "../../appwrite/config";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import plussvg from '../../../public/plus-svgrepo-com.svg'
 
 export default function PostForm({ post }) {
   const { register, handleSubmit, watch, setValue, control, getValues } =
@@ -79,16 +80,18 @@ export default function PostForm({ post }) {
   return (
     <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
       <div className="w-2/3 px-2">
-        <Input
-          label="Title"
+        <Input 
+          
           placeholder="Title"
-          className="mb-4"
+          className="mb-4 font-inter border-[1px] "
           {...register("title", { required: true })}
+          
         />
-        <Input
-          label="Slug"
+        <div className="flex flex-row items-center justify-center">
+          
+          <Input
           placeholder="Slug"
-          className="mb-4"
+          className="mb-4 border-[1px] font-inter hidden "
           {...register("slug", { required: true })}
           onInput={(e) => {
             setValue("slug", slugTransform(e.currentTarget.value), {
@@ -96,9 +99,10 @@ export default function PostForm({ post }) {
             });
           }}
         />
+        </div>
+
         <div className= " mt-4 w-[95vw] sm:w-full  ">
         <RTE
-          label="Content"
           name="content"
           control={control}
           defaultValue={getValues("content")}
@@ -108,9 +112,10 @@ export default function PostForm({ post }) {
       </div>
       <div className="w-1/3 px-2  ">
         <Input
+          placeholder="Image"
           label="Image"
           type="file"
-          className="mb-4 text-[12px] "
+          className="mb-4 text-[12px] font-inter "
           accept="image/png, image/jpg, image/jpeg, image/gif"
           {...register("image", { required: !post })}
         />
@@ -123,18 +128,18 @@ export default function PostForm({ post }) {
             />
           </div>
         )}
-        <div className="ml-2 mb-1" > Status</div>
+        <div className="ml-2 mb-1 font-inter " > Select Status</div>
         <Select
-        
+       
           options={["Active", "Inactive"]}
           label="Status"
-          className="mb-4"
+          className="mb-4 font-inter "
           {...register("status", { required: true })}
         />
         <Button
           type="submit"
           bgColor={post ? "bg-green-500" : undefined}
-          className="w-full"
+          className="w-full font-inter "
         >
           {post ? "Update" : "Submit"}
         </Button>
