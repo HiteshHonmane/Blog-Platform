@@ -12,7 +12,7 @@ function LogoutBtn() {
         })
     }
   return (
-    <button className='inline-bock px-6 py-2 duration-200 text-white font-roboto  hover:bg-blue-100 rounded-full font-bold'
+    <button className='inline-bock px-6 py-2 duration-200 text-black font-inter  hover:bg-blue-100 rounded-full font-bold'
     onClick={logoutHanler}
     >
         Logout

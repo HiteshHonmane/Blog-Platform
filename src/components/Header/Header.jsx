@@ -1,6 +1,5 @@
 import React from "react";
-import { Container, Logo, LogoutBtn } from "../index";
-import { Link } from "react-router-dom";
+import { LogoutBtn } from "../index";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -30,48 +29,37 @@ function Header() {
       active: authStatus,
     },
     {
-      name: "Write Ar",
+      name: "Write Article",
       slug: "/add-post",
       active: authStatus,
     },
   ];
 
   return (
-    <header className="sm:w-[1216px] sm:h-[60px] sm:py-2.5 sm:justify-between sm:items-center sm:inline-flex 
-    w-[390px] h-[72px] p-5 justify-between items-center inline-flex
-    
-    ">
+    <header className="w-full p-5 sm:p-0   ">
 
+      <div className="w-full flex flex-col sm:flex-row justify-between items-center ">
 
-      <Container>
-
-        <nav className="flex flex-row w-[100vw]   justify-between gap-[60vw] items-center ">
-          <div className="text-gray-50 text-xl font-bold font-spartan">
-            RUNO
-          </div>
-          <ul className="w-[1440px] h-20 bg-black/opacity-20 flex  items-center  justify-around ">
-            {navItems.map((item) =>
-              item.active ? (
-                <li key={item.name}>
-                  <button
-                    onClick={() => navigate(item.slug)}
-                    className="text-white text- font-bold font-roboto "
-                  >
-                    {item.name}
-                  </button>
-                </li>
-              ) : null
-            )}
-            {authStatus && (
-              <li>
-                <LogoutBtn />
-              </li>
-            )}
-          </ul>
+        <div className="text-black text-lg sm:text-xl md:text-2xl font-semibold  font-['Inter']">
+          RUNO
+        </div>
+        <nav className="w-full sm:w-auto mt-4 sm:mt-0 flex flex-col sm:flex-row items-center gap-3.5">
+          {navItems.map((item) =>
+            item.active ? (
+              <button
+                key={item.name}
+                onClick={() => navigate(item.slug)}
+                className="text-black text-sm sm:text-base md:text-lg font-semibold cursor-pointer "
+              >
+                {item.name}
+              </button>
+            ) : null
+          )}
+          {authStatus && (
+            <LogoutBtn />
+          )}
         </nav>
-
-
-      </Container>
+      </div>
     </header>
   );
 }
