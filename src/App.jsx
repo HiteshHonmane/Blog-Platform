@@ -29,7 +29,6 @@ function App() {
         <main>
          <Outlet />
         </main>
-        <Footer />
       </div>
     </div>
   ) : null

@@ -39,7 +39,7 @@ function Home() {
   return (
     <div className=" w-full  ">
       <div className="w-full border-t border-b border-black/30 flex justify-start sm:justify-center items-start">
-    <div className="text-zinc-900 font-bold font-['Inter'] text-7xl sm:text-[160.80px] xl:text-[243.80px]">THE BLOG</div>
+    <div className="text-zinc-900 font-bold font-['Inter'] text-7xl sm:text-[160.80px] xl:text-[243.80px] uppercase">thought</div>
 </div>
 
 
