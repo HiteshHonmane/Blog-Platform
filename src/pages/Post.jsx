@@ -33,9 +33,9 @@ export default function Post() {
     };
 
     return post ? (
-        <div className="bg-gray-300 py-8">
+        <div className=" py-8">
             <Container>
-                <div className="w-full flex justify-center mb-4 relative border rounded-xl p-2">
+                <div className="w-[30vw] h-[15vw] flex justify-center mb-4 relative border rounded-xl p-2">
                     <img
                         src={appwriteService.getFilePreview(post.featuredImage)}
                         alt={post.title}
@@ -49,7 +49,7 @@ export default function Post() {
                                     Edit
                                 </Button>
                             </Link>
-                            <Button bgColor="bg-red-500" onClick={deletePost}>
+                            <Button bgColor="bg-red-400" onClick={deletePost}>
                                 Delete
                             </Button>
                         </div>
@@ -58,7 +58,7 @@ export default function Post() {
                 <div className="w-full mb-6">
                     <h1 className="text-2xl font-bold">{post.title}</h1>
                 </div>
-                <div className="browser-css">
+                <div className="browser-css w-[95%] h-full m-5">
                     {parse(post.content)}
                     </div>
             </Container>
